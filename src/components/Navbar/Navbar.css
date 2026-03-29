@@ -1,0 +1,117 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 10px;
+}
+
+/* LOGO */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 4px;
+}
+.navbar__logo:hover {
+  border-color: white;
+}
+.navbar__logoImage {
+  width: 90px;
+  filter: brightness(0) invert(1); /* makes logo white */
+  margin-top: 4px;
+}
+
+/* SEARCH BAR */
+.navbar__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 700px;
+}
+.navbar__searchCategory {
+  padding: 10px 8px;
+  background-color: #f3f3f3;
+  border: none;
+  border-right: 1px solid #cdcdcd;
+  font-size: 13px;
+  cursor: pointer;
+  height: 100%;
+}
+.navbar__searchInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+.navbar__searchButton {
+  padding: 8px 15px;
+  background-color: #febd69;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  height: 100%;
+  transition: background-color 0.1s;
+}
+.navbar__searchButton:hover {
+  background-color: #f3a847;
+}
+
+/* RIGHT SIDE */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.navbar__option {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.navbar__option:hover {
+  border-color: white;
+}
+.navbar__optionLineOne {
+  font-size: 11px;
+}
+.navbar__optionLineTwo {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* CART */
+.navbar__optionCart {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  gap: 4px;
+}
+.navbar__optionCart:hover {
+  border-color: white;
+}
+.navbar__cartCount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f08804;
+  margin-right: 2px;
+}

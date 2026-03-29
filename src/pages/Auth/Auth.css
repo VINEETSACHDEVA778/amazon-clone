@@ -1,0 +1,127 @@
+.auth {
+  background: #eaeded;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.auth__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.auth__logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.auth__box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+}
+
+.auth__title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #0f1111;
+}
+
+.auth__error {
+  background: #fff0f0;
+  border: 1px solid #e77600;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #cc0000;
+  margin-bottom: 14px;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.auth__field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1111;
+}
+
+.auth__field input {
+  padding: 8px 10px;
+  border: 1px solid #adb1b8;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth__field input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 0 3px rgba(231,118,0,0.25);
+}
+
+.auth__submitBtn {
+  width: 100%;
+  padding: 10px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.15s;
+}
+.auth__submitBtn:hover:not(:disabled) { background: #f7ca00; }
+.auth__submitBtn:disabled {
+  background: #f0f2f2;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.auth__divider {
+  text-align: center;
+  margin: 20px 0 12px;
+  font-size: 12px;
+  color: #555;
+  position: relative;
+}
+.auth__divider::before,
+.auth__divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: #ddd;
+}
+.auth__divider::before { left: 0; }
+.auth__divider::after { right: 0; }
+
+.auth__switchBtn {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #adb1b8;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.auth__switchBtn:hover { background: #f7f8f8; }

@@ -1,0 +1,168 @@
+.checkout {
+  background: #eaeded;
+  min-height: 100vh;
+  padding: 20px;
+}
+.checkout__container {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.checkout__left { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+
+.checkout__section {
+  background: white;
+  border-radius: 4px;
+  padding: 24px;
+  border: 1px solid #ddd;
+}
+.checkout__sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f1111;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.checkout__step {
+  background: #f08804;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* FORM GRID */
+.checkout__formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.checkout__fieldFull { grid-column: 1 / -1; }
+.checkout__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.checkout__field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f1111;
+}
+.checkout__field input,
+.checkout__field select {
+  padding: 9px 12px;
+  border: 1px solid #adb1b8;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.checkout__field input:focus,
+.checkout__field select:focus {
+  border-color: #f08804;
+  box-shadow: 0 0 0 3px rgba(240,136,4,0.15);
+}
+.checkout__field input.error,
+.checkout__field select.error {
+  border-color: #cc0000;
+}
+.checkout__error {
+  font-size: 12px;
+  color: #cc0000;
+}
+
+/* PAYMENT OPTIONS */
+.checkout__paymentOptions { display: flex; flex-direction: column; gap: 10px; }
+.checkout__paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.checkout__paymentOption:hover { border-color: #f08804; background: #fffbf5; }
+.checkout__paymentOption input[type="radio"] { accent-color: #f08804; width: 16px; height: 16px; }
+.checkout__paymentLabel { display: flex; flex-direction: column; gap: 2px; }
+.checkout__paymentName { font-size: 14px; font-weight: 500; color: #0f1111; }
+.checkout__paymentDesc { font-size: 12px; color: #555; }
+
+/* REVIEW ITEMS */
+.checkout__reviewItems { display: flex; flex-direction: column; gap: 12px; }
+.checkout__reviewItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.checkout__reviewItem:last-child { border-bottom: none; }
+.checkout__reviewImage {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+}
+.checkout__reviewInfo { display: flex; flex-direction: column; gap: 4px; }
+.checkout__reviewName { font-size: 13px; color: #0f1111; line-height: 1.3; }
+.checkout__reviewQty { font-size: 13px; color: #555; }
+.checkout__reviewPrice { font-size: 14px; font-weight: 700; }
+
+/* RIGHT — SUMMARY */
+.checkout__right { width: 280px; flex-shrink: 0; }
+.checkout__summary {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  position: sticky;
+  top: 80px;
+}
+.checkout__placeOrderBtn {
+  width: 100%;
+  padding: 12px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.15s;
+}
+.checkout__placeOrderBtn:hover:not(:disabled) { background: #f7ca00; }
+.checkout__placeOrderBtn:disabled {
+  background: #f0f2f2;
+  color: #888;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+.checkout__legal { font-size: 11px; color: #555; line-height: 1.5; margin-bottom: 14px; }
+.checkout__link { color: #007185; cursor: pointer; }
+.checkout__summaryDivider { border: none; border-top: 1px solid #ddd; margin: 14px 0; }
+.checkout__summaryTitle { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #0f1111; }
+.checkout__summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #0f1111;
+  margin-bottom: 8px;
+}
+.checkout__free { color: #007600; font-weight: 600; }
+.checkout__orderTotal { font-size: 17px; font-weight: 700; color: #b12704; }
+.checkout__secureNote { font-size: 12px; color: #555; text-align: center; margin-top: 14px; }
