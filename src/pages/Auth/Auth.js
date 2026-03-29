@@ -30,8 +30,8 @@ function Auth() {
 
     try {
       const url = isLogin
-        ? 'http://localhost:5000/api/auth/login'
-        : 'http://localhost:5000/api/auth/register';
+        ? 'https://amazon-clone-1-2wgs.onrender.com/api/auth/login'
+        : 'https://amazon-clone-1-2wgs.onrender.com/api/auth/register';
 
       const payload = isLogin
         ? { email: form.email, password: form.password }

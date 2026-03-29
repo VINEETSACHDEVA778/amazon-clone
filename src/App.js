@@ -20,7 +20,7 @@ function App() {
   // Fetch cart from backend when user logs in
   useEffect(() => {
     if (token) {
-      axios.get('http://localhost:5000/api/cart', {
+      axios.get('https://amazon-clone-1-2wgs.onrender.com/api/cart', {
         headers: { Authorization: `Bearer ${token}` }
       }).then(res => {
         // Map backend response to match frontend shape
@@ -54,7 +54,7 @@ function App() {
     // Sync to backend if logged in
     if (token) {
       try {
-        await axios.post('http://localhost:5000/api/cart',
+        await axios.post('https://amazon-clone-1-2wgs.onrender.com/api/cart',
           { product_id: product.id, quantity: 1 },
           { headers: { Authorization: `Bearer ${token}` } }
         );

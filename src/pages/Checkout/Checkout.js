@@ -68,7 +68,7 @@ function Checkout({ cartItems, setCartItems }) {
       const address = `${form.addressLine1}${form.addressLine2 ? ', ' + form.addressLine2 : ''}, ${form.city}, ${form.state} - ${form.pincode}`;
 
       const res = await axios.post(
-        'http://localhost:5000/api/orders',
+        'https://amazon-clone-1-2wgs.onrender.com/api/orders',
         {
           cartItems,
           paymentMethod: form.paymentMethod,
