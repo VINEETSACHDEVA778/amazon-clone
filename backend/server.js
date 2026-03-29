@@ -6,7 +6,7 @@ require('./db/pool');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://amazon-clone-psi-lilac.vercel.app' }));
 app.use(express.json());
 
 app.use('/api/products', require('./routes/productRoutes'));
